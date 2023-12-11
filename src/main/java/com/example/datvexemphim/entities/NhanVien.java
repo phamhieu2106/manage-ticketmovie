@@ -1,4 +1,4 @@
-package com.example.datvexemphim.entity;
+package com.example.datvexemphim.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,25 +20,24 @@ import lombok.ToString;
 @ToString
 @Builder
 @Entity
-@Table(name = "khachhang")
-public class KhachHang {
+@Table(name = "nhanvien")
+public class NhanVien {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
-    private long id;
+    private Long id;
 
-    @Column(name = "MaKhach")
+    @Column(name = "Ma")
     private String ma;
 
     @Column(name = "HoTen")
     private String hoTen;
 
-    @Column(name = "SDT")
-    private String sdt;
+    @Column(name = "MatKhau")
+    private String matKhau;
 
-    @Column(name = "Email")
-    private String email;
-
+    @Column(name = "ChucVu")
+    private String chucVu;
 
 }

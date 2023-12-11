@@ -1,4 +1,4 @@
-package com.example.datvexemphim.entity;
+package com.example.datvexemphim.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,13 +11,11 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Cleanup;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.naming.Name;
 import java.sql.Date;
 
 @AllArgsConstructor
@@ -33,7 +31,7 @@ public class SuatChieu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
-    private long id;
+    private Long id;
 
     @Column(name = "Ma")
     private String ma;

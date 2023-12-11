@@ -1,4 +1,4 @@
-package com.example.datvexemphim.entity;
+package com.example.datvexemphim.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,21 +23,21 @@ import lombok.ToString;
 @ToString
 @Builder
 @Entity
-@Table(name = "phim")
-public class PhimTheLoai {
+@Table(name = "suatchieuve")
+public class VeXemPhimSuatChieu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
-    private long id;
+    private Long id;
 
-    @Column(name = "MaTheLoai")
-    @JoinColumn(name = "MaTheLoai",referencedColumnName = "Ma")
+    @Column(name = "MaSuatChieu")
+    @JoinColumn(referencedColumnName = "MaSuatChieu")
     @ManyToOne(fetch = FetchType.LAZY)
-    private TheLoai theLoai;
+    private SuatChieu suatChieu;
 
-    @Column(name = "MaPhim")
-    @JoinColumn(name = "MaPhim",referencedColumnName = "Ma")
+    @Column(name = "MaVe")
+    @JoinColumn(referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Phim phim;
+    private VeXemPhim veXemPhim;
 }
