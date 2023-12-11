@@ -31,13 +31,11 @@ public class VeXemPhimSuatChieu {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "MaSuatChieu")
-    @JoinColumn(referencedColumnName = "MaSuatChieu")
+    @JoinColumn(name = "MaSuatChieu",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private SuatChieu suatChieu;
 
-    @Column(name = "MaVe")
-    @JoinColumn(referencedColumnName = "Ma")
+    @JoinColumn(name = "MaVe",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private VeXemPhim veXemPhim;
 }

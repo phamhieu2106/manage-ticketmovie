@@ -40,21 +40,18 @@ public class VeXemPhim {
     private String ma;
 
     @Column(name = "MaSuatChieu")
-    @OneToMany(mappedBy = "suatchieuve")
+    @OneToMany(mappedBy = "veXemPhim")
     private List<VeXemPhimSuatChieu> suatChieu;
 
-    @Column(name = "MaLoaiVe")
-    @JoinColumn(referencedColumnName = "Ma")
+    @JoinColumn(name = "MaLoaiVe",referencedColumnName = "Ma")
     @OneToOne
     private LoaiVe loaiVe;
 
-    @Column(name = "MaKhachHang")
-    @JoinColumn(referencedColumnName = "Ma")
+    @JoinColumn(name = "MaKhachHang",referencedColumnName = "MaKhach")
     @ManyToOne(fetch = FetchType.LAZY)
     private KhachHang khachHang;
 
-    @Column(name = "MaNhanVien")
-    @JoinColumn(referencedColumnName = "Ma")
+    @JoinColumn(name = "MaNhanVien",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private NhanVien nhanVien;
 

@@ -36,12 +36,10 @@ public class SuatChieu {
     @Column(name = "Ma")
     private String ma;
 
-    @Column(name = "MaPhim")
     @JoinColumn(name = "MaPhim",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private Phim phim;
 
-    @Column(name = "MaPhongChieu")
     @JoinColumn(name = "MaPhongChieu",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private PhongChieu phongChieu;

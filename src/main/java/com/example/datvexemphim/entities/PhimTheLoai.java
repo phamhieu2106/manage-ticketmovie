@@ -31,12 +31,10 @@ public class PhimTheLoai {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "MaTheLoai")
     @JoinColumn(name = "MaTheLoai",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private TheLoai theLoai;
 
-    @Column(name = "MaPhim")
     @JoinColumn(name = "MaPhim",referencedColumnName = "Ma")
     @ManyToOne(fetch = FetchType.LAZY)
     private Phim phim;

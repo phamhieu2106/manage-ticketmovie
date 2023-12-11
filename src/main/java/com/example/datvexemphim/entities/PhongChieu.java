@@ -39,7 +39,6 @@ public class PhongChieu {
     @Column(name = "Ten")
     private String ten;
 
-    @Column(name = "MaGhe")
     @JoinColumn(name = "MaGhe",referencedColumnName = "Ma")
     @OneToMany(fetch = FetchType.LAZY)
     private List<Ghe> listGhe;
