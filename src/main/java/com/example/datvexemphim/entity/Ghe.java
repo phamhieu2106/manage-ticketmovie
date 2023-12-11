@@ -22,7 +22,6 @@ import lombok.ToString;
 @Entity
 @Table(name = "ghe")
 public class Ghe{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
