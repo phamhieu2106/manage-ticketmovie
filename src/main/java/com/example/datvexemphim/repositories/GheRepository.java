@@ -1,6 +1,6 @@
 package com.example.datvexemphim.repositories;
 
-import com.example.datvexemphim.dto.GheResponse;
+import com.example.datvexemphim.dto.reponse.GheResponse;
 import com.example.datvexemphim.entities.Ghe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

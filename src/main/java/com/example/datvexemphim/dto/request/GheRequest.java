@@ -1,6 +1,7 @@
-package com.example.datvexemphim.dto;
+package com.example.datvexemphim.dto.request;
 
 import com.example.datvexemphim.entities.Ghe;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,6 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@NotNull
 public class GheRequest {
 
     private Long id;

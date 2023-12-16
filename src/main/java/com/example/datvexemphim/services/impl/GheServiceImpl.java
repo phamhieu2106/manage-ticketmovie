@@ -1,7 +1,7 @@
 package com.example.datvexemphim.services.impl;
 
-import com.example.datvexemphim.dto.GheRequest;
-import com.example.datvexemphim.dto.GheResponse;
+import com.example.datvexemphim.dto.request.GheRequest;
+import com.example.datvexemphim.dto.reponse.GheResponse;
 import com.example.datvexemphim.entities.Ghe;
 import com.example.datvexemphim.repositories.GheRepository;
 import com.example.datvexemphim.services.IService;
@@ -28,6 +28,7 @@ public class GheServiceImpl implements IService<GheResponse, GheRequest, Ghe> {
 
     @Override
     public Ghe add(GheRequest object) {
+
         Ghe ghe = object.map(new Ghe());
         return repository.save(ghe);
     }
