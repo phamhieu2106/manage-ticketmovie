@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SuatChieuServiceImpl implements IService<SuatChieu,SuatChieu,SuatChieu> {
@@ -20,21 +21,29 @@ public class SuatChieuServiceImpl implements IService<SuatChieu,SuatChieu,SuatCh
 
     @Override
     public List<SuatChieu> getAll() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public SuatChieu add(SuatChieu object) {
-        return null;
+        return repository.save(object);
     }
 
     @Override
     public SuatChieu update(Long id, SuatChieu object) {
+        Optional<SuatChieu> optional = repository.findById(id);
+        if(!optional.isEmpty()){
+            object.setId(id);
+            return repository.save(object);
+        }
         return null;
     }
 
     @Override
     public void remove(Long id) {
-
+        Optional<SuatChieu> optional = repository.findById(id);
+        if(!optional.isEmpty()){
+            repository.delete(optional.get());
+        }
     }
 }

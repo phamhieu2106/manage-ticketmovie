@@ -1,4 +1,4 @@
-package com.example.datvexemphim.controlleries;
+package com.example.datvexemphim.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
