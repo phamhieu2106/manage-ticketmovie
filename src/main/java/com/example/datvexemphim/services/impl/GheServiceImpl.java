@@ -1,6 +1,6 @@
 package com.example.datvexemphim.services.impl;
 
-import com.example.datvexemphim.dto.request.GheRequest;
+import com.example.datvexemphim.dto.request.impl.GheRequest;
 import com.example.datvexemphim.dto.reponse.GheResponse;
 import com.example.datvexemphim.entities.Ghe;
 import com.example.datvexemphim.repositories.GheRepository;

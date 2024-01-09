@@ -2,12 +2,9 @@ package com.example.datvexemphim.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,19 +20,16 @@ import lombok.ToString;
 @ToString
 @Builder
 @Entity
-@Table(name = "suatchieuve")
-public class VeXemPhimSuatChieu {
+@Table(name = "ngonngu")
+public class NgonNgu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private Long id;
 
-    @JoinColumn(name = "MaSuatChieu",referencedColumnName = "Ma")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private SuatChieu suatChieu;
+    @Column(name = "Ten")
+    private String ten;
 
-    @JoinColumn(name = "MaVe",referencedColumnName = "Ma")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private VeXemPhim veXemPhim;
+
 }

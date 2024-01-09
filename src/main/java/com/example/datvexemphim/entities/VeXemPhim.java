@@ -36,31 +36,18 @@ public class VeXemPhim {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Ma")
-    private String ma;
-
-    @Column(name = "MaSuatChieu")
-    @OneToMany(mappedBy = "veXemPhim")
-    private List<VeXemPhimSuatChieu> suatChieu;
-
-    @JoinColumn(name = "MaLoaiVe",referencedColumnName = "Ma")
-    @OneToOne
-    private LoaiVe loaiVe;
-
-    @JoinColumn(name = "MaKhachHang",referencedColumnName = "MaKhach")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private KhachHang khachHang;
-
-    @JoinColumn(name = "MaNhanVien",referencedColumnName = "Ma")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private NhanVien nhanVien;
-
-    @Column(name = "GioTao")
-    private Date gioTao;
-
     @Column(name = "GiaVe")
     private Double giaVe;
 
     @Column(name = "TrangThai")
     private int trangThai;
+
+    @JoinColumn(name = "IdSuatChieu",referencedColumnName = "Id")
+    @ManyToOne
+    private SuatChieu suatChieu;
+
+    @JoinColumn(name = "IdSuatChieu",referencedColumnName = "Id")
+    @ManyToOne
+    private User user;
+
 }

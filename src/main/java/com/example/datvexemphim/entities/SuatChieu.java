@@ -33,17 +33,14 @@ public class SuatChieu {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Ma")
-    private String ma;
-
-    @JoinColumn(name = "MaPhim",referencedColumnName = "Ma")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdPhimChiTiet",referencedColumnName = "Id")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Phim phim;
 
-    @JoinColumn(name = "MaPhongChieu",referencedColumnName = "Ma")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdPhongChieu",referencedColumnName = "Id")
+    @ManyToOne(fetch = FetchType.EAGER)
     private PhongChieu phongChieu;
 
-    @Column(name = "NgayGio")
+    @Column(name = "NgayGioChieu")
     private Date ngayGio;
 }

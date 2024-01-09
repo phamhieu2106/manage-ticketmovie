@@ -1,7 +1,6 @@
 package com.example.datvexemphim.controllers.impl;
 
 import com.example.datvexemphim.controllers.IController;
-import com.example.datvexemphim.dto.request.KhachHangRequest;
 import com.example.datvexemphim.services.IService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

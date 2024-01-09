@@ -28,9 +28,6 @@ public class TheLoai {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Ma")
-    private String ma;
-
     @Column(name = "Ten")
     private String ten;
 

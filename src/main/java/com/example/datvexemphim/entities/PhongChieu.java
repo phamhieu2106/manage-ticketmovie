@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -33,13 +32,7 @@ public class PhongChieu {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Ma")
-    private String ma;
-
     @Column(name = "Ten")
     private String ten;
 
-    @JoinColumn(name = "MaGhe",referencedColumnName = "Ma")
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Ghe> listGhe;
 }

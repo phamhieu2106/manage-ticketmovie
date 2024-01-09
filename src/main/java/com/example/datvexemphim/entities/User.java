@@ -20,17 +20,26 @@ import lombok.ToString;
 @ToString
 @Builder
 @Entity
-@Table(name = "loaive")
-public class LoaiVe {
+@Table(name = "userdb")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Ma")
-    private String ma;
+    @Column(name = "HoTen")
+    private String hoTen;
 
-    @Column(name = "TenLoaiVe")
-    private String ten;
+    @Column(name = "MatKhau")
+    private String matKhau;
+
+    @Column(name = "SoDienThoai")
+    private String soDienThoai;
+
+    @Column(name = "Email")
+    private String email;
+
+    @Column(name = "Role")
+    private String role;
 }

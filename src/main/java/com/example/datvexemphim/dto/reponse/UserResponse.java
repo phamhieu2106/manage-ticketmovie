@@ -1,10 +1,17 @@
 package com.example.datvexemphim.dto.reponse;
 
-public interface KhachHangReponse {
+public interface UserResponse {
 
     String getId();
-    String getMaKhach();
+
     String getHoTen();
-    String getSDT();
+
+    String getMatKhau();
+
+    String getSoDienThoai();
+
     String getEmail();
+
+    String getRole();
+
 }
